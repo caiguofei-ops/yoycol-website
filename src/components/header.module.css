@@ -1,0 +1,6 @@
+.header { display:flex; align-items:center; justify-content:space-between; padding:12px 28px; background:#fff; box-shadow:0 1px 6px rgba(0,0,0,0.06); }
+.left { display:flex; align-items:center; gap:12px; }
+.logo { width:48px; height:48px; object-fit:cover; border-radius:6px; }
+.title { margin:0; font-size:1.2rem; }
+.nav a { margin-left:14px; color:#333; text-decoration:none; }
+.cart { font-weight:600; }

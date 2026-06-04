@@ -103,6 +103,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
+        <meta name="facebook-domain-verification" content="9djhv8xoqvo8smfl9v05t8oiamqwe7" />
       </head>
       <body className="min-h-full flex flex-col">
         <OrganizationSchema />

@@ -37,40 +37,6 @@ export default function OrganizationSchema() {
       '@type': 'Place',
       name: 'Worldwide',
     },
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'Print-on-Demand Caps',
-      itemListElement: [
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Product',
-            name: 'Baseball Caps',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Product',
-            name: 'Berets',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Product',
-            name: 'Fisherman Hats',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Product',
-            name: 'Knit Hats',
-          },
-        },
-      ],
-    },
   };
 
   return (

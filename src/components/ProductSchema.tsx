@@ -27,12 +27,19 @@ export default function ProductSchema({ product, baseUrl, category }: ProductSch
     },
     category: category,
     offers: {
-      '@type': 'AggregateOffer',
-      lowPrice: '9.99',
-      highPrice: '49.99',
+      '@type': 'Offer',
       priceCurrency: 'USD',
+      price: '19.99',
       availability: 'https://schema.org/InStock',
-      offerCount: '100',
+      seller: {
+        '@type': 'Organization',
+        name: 'yoycol',
+      },
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      reviewCount: '156',
     },
     additionalProperty: [
       {

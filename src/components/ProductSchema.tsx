@@ -28,8 +28,6 @@ export default function ProductSchema({ product, baseUrl, category }: ProductSch
     category: category,
     offers: {
       '@type': 'Offer',
-      priceCurrency: 'USD',
-      price: '19.99',
       availability: 'https://schema.org/InStock',
       seller: {
         '@type': 'Organization',

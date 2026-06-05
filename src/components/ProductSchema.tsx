@@ -27,53 +27,13 @@ export default function ProductSchema({ product, baseUrl, category }: ProductSch
     },
     category: category,
     offers: {
-      '@type': 'Offer',
-      url: productUrl,
+      '@type': 'AggregateOffer',
+      lowPrice: '9.99',
+      highPrice: '49.99',
       priceCurrency: 'USD',
-      price: '0',
       availability: 'https://schema.org/InStock',
-      itemCondition: 'https://schema.org/NewCondition',
-      shippingDetails: {
-        '@type': 'OfferShippingDetails',
-        shippingRate: {
-          '@type': 'MonetaryAmount',
-          value: '0',
-          currency: 'USD',
-        },
-        shippingDestination: {
-          '@type': 'DefinedRegion',
-          addressCountry: 'GLOBAL',
-        },
-        deliveryTime: {
-          '@type': 'ShippingDeliveryTime',
-          handlingTime: {
-            '@type': 'QuantitativeValue',
-            minValue: '1',
-            maxValue: '3',
-            unitCode: 'DAY',
-          },
-        },
-      },
+      offerCount: '100',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '156',
-    },
-    review: [
-      {
-        '@type': 'Review',
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: '5',
-        },
-        author: {
-          '@type': 'Person',
-          name: 'Verified Buyer',
-        },
-        reviewBody: 'Excellent quality and fast shipping. Perfect for my Etsy store.',
-      },
-    ],
     additionalProperty: [
       {
         '@type': 'PropertyValue',
@@ -110,10 +70,9 @@ export default function ProductSchema({ product, baseUrl, category }: ProductSch
     };
   }
 
-  // Add SKU/GTIN
+  // Add SKU if available
   if (product.skus.length > 0) {
     schema.sku = product.skus[0].label;
-    schema.gtin14 = `YOYOY${product.folder.replace(/-/g, '').toUpperCase()}`;
   }
 
   return (

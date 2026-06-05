@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styles from './home.module.css';
+import ProductListSchema from '../components/ProductListSchema';
 
 export const metadata = {
   title: 'yoycol | Wholesale Print-on-Demand Caps for Dropshippers',
@@ -8,7 +9,9 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div className={styles.home}>
+    <>
+      <ProductListSchema />
+      <div className={styles.home}>
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
@@ -123,5 +126,6 @@ export default function Home() {
         </a>
       </section>
     </div>
+    </>
   );
 }

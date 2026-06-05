@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import ProductList from './ProductList';
+import ProductListSchema from '../../components/ProductListSchema';
 
 export const metadata: Metadata = {
   title: 'Print-on-Demand Cap Products Catalog | yoycol',
@@ -22,5 +23,10 @@ export const metadata: Metadata = {
 };
 
 export default function ProductsPage() {
-  return <ProductList />;
+  return (
+    <>
+      <ProductListSchema />
+      <ProductList />
+    </>
+  );
 }

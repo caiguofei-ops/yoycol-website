@@ -40,30 +40,30 @@ export default function Home() {
         <section className={styles.features}>
           <div className={styles.featureCard}>
             <div className={styles.featureIcon}>
-              <Icons.Palette />
+              <Icons.Design />
             </div>
             <h3>Custom Designs</h3>
-            <p>Upload your own artwork or choose from trendy templates. 3D full-print technology.</p>
+            <p>Upload your own artwork. 3D full-print technology for vibrant, durable prints.</p>
           </div>
           <div className={styles.featureCard}>
             <div className={styles.featureIcon}>
-              <Icons.Rocket />
+              <Icons.Production />
             </div>
             <h3>Fast Production</h3>
             <p>Ready in 1-3 business days. Express worldwide shipping to over 100 countries.</p>
           </div>
           <div className={styles.featureCard}>
             <div className={styles.featureIcon}>
-              <Icons.Sparkles />
+              <Icons.Quality />
             </div>
             <h3>Premium Quality</h3>
             <p>Vibrant, durable prints with attention to every detail. Quality guaranteed.</p>
           </div>
           <div className={styles.featureCard}>
             <div className={styles.featureIcon}>
-              <Icons.Package />
+              <Icons.NoMinimum />
             </div>
-            <h3>No Minimum</h3>
+            <h3>No Minimum Order</h3>
             <p>Order just 1 piece with no minimum quantity required. Perfect for POD business.</p>
           </div>
         </section>
@@ -90,7 +90,7 @@ export default function Home() {
             <Link href="/products/POD-fisherman-hat" className={styles.categoryCard}>
               <div className={styles.categoryImage} style={{background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'}}>
                 <div className={styles.categoryIcon}>
-                  <Icons.Fishing />
+                  <Icons.FishermanHat />
                 </div>
               </div>
               <div className={styles.categoryContent}>
@@ -104,7 +104,7 @@ export default function Home() {
             <Link href="/products/POD-beret-large-size" className={styles.categoryCard}>
               <div className={styles.categoryImage} style={{background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'}}>
                 <div className={styles.categoryIcon}>
-                  <Icons.Crown />
+                  <Icons.Beret />
                 </div>
               </div>
               <div className={styles.categoryContent}>
@@ -118,7 +118,7 @@ export default function Home() {
             <Link href="/products/POD-acrylic-knit-hat" className={styles.categoryCard}>
               <div className={styles.categoryImage} style={{background: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)'}}>
                 <div className={styles.categoryIcon}>
-                  <Icons.Knit />
+                  <Icons.KnitHat />
                 </div>
               </div>
               <div className={styles.categoryContent}>
@@ -145,21 +145,21 @@ export default function Home() {
             </div>
             <div className={styles.whyCard}>
               <div className={styles.whyIcon}>
-                <Icons.Globe />
+                <Icons.GlobalShipping />
               </div>
               <h3>Global Fulfillment</h3>
               <p>Ship anywhere in the world. Reliable logistics partners for fast delivery.</p>
             </div>
             <div className={styles.whyCard}>
               <div className={styles.whyIcon}>
-                <Icons.Image />
+                <Icons.Mockup />
               </div>
               <h3>Free Mockups</h3>
               <p>High-quality product mockups included for your listings on Amazon, Etsy, Shopify.</p>
             </div>
             <div className={styles.whyCard}>
               <div className={styles.whyIcon}>
-                <Icons.Headphones />
+                <Icons.Support />
               </div>
               <h3>24/7 Support</h3>
               <p>Dedicated account managers to help with orders, customization, and shipping.</p>
@@ -172,7 +172,7 @@ export default function Home() {
           <h2>Ready to Start Selling?</h2>
           <p>Join thousands of dropshippers and e-commerce sellers who trust us for quality print-on-demand caps.</p>
           <a href="https://wa.me/8613348325895" target="_blank" rel="noopener noreferrer" className={styles.ctaBtn}>
-            <Icons.MessageCircle />
+            <Icons.WhatsApp />
             Get Started via WhatsApp
           </a>
         </section>

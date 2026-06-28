@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect, useCallback } from 'react';
+import Icons from './Icons';
 import styles from './product-detail.module.css';
 
 type SkuItem = {
@@ -121,10 +122,10 @@ export default function ProductDetailClient({ product }: { product: ProductItem 
             {slides.length > 1 && (
               <>
                 <button className={`${styles.navBtn} ${styles.navPrev}`} onClick={goToPrev} aria-label="Previous">
-                  ‹
+                  <Icons.ChevronLeft />
                 </button>
                 <button className={`${styles.navBtn} ${styles.navNext}`} onClick={goToNext} aria-label="Next">
-                  ›
+                  <Icons.ChevronRight />
                 </button>
               </>
             )}
@@ -173,9 +174,9 @@ export default function ProductDetailClient({ product }: { product: ProductItem 
         <p className={styles.description}>{product.description}</p>
 
         <div className={styles.tagRow}>
-          <span className={styles.tag}>🚚 Fast Shipping</span>
-          <span className={styles.tag}>✅ Quality Guaranteed</span>
-          <span className={styles.tag}>🎨 Custom Design Welcome</span>
+          <span className={styles.tag}><Icons.Shipping /> Fast Shipping</span>
+          <span className={styles.tag}><Icons.Check /> Quality Guaranteed</span>
+          <span className={styles.tag}><Icons.Design /> Custom Design Welcome</span>
         </div>
 
         <div className={styles.divider}></div>
@@ -188,7 +189,7 @@ export default function ProductDetailClient({ product }: { product: ProductItem 
 
         {/* Custom Design Note */}
         <div className={styles.customNote}>
-          <span className={styles.customIcon}>💡</span>
+          <span className={styles.customIcon}><Icons.Lightbulb /></span>
           <p>You can send us your own design images after placing order. We will print your custom artwork on this cap style.</p>
         </div>
 
@@ -222,14 +223,14 @@ export default function ProductDetailClient({ product }: { product: ProductItem 
           rel="noopener noreferrer"
           className={styles.whatsappBtn}
         >
-          💬 WhatsApp: +86 13348325895
+          <Icons.WhatsApp /> WhatsApp: +86 13348325895
         </a>
 
         <a
           href="mailto:info@yoycolpod.com"
           className={styles.emailBtn}
         >
-          ✉️ Email: info@yoycolpod.com
+          <Icons.Mail /> Email: info@yoycolpod.com
         </a>
 
         {/* Share Section */}
@@ -257,21 +258,21 @@ export default function ProductDetailClient({ product }: { product: ProductItem 
 
         <div className={styles.serviceRow}>
           <div className={styles.serviceItem}>
-            <span className={styles.serviceIcon}>🛡️</span>
+            <span className={styles.serviceIcon}><Icons.Lock /></span>
             <div>
               <strong>Secure Payment</strong>
               <p>Multiple payment methods</p>
             </div>
           </div>
           <div className={styles.serviceItem}>
-            <span className={styles.serviceIcon}>📦</span>
+            <span className={styles.serviceIcon}><Icons.Package /></span>
             <div>
               <strong>Fast Delivery</strong>
               <p>Ships in 24-48 hours worldwide</p>
             </div>
           </div>
           <div className={styles.serviceItem}>
-            <span className={styles.serviceIcon}>💬</span>
+            <span className={styles.serviceIcon}><Icons.Support /></span>
             <div>
               <strong>24/7 Support</strong>
               <p>Contact us anytime</p>
@@ -356,7 +357,7 @@ export default function ProductDetailClient({ product }: { product: ProductItem 
       {zoomOpen && (
         <div className={styles.zoomModal} onClick={() => setZoomOpen(false)}>
           <div className={styles.zoomContent} onClick={e => e.stopPropagation()}>
-            <button className={styles.zoomClose} onClick={() => setZoomOpen(false)}>×</button>
+            <button className={styles.zoomClose} onClick={() => setZoomOpen(false)}><Icons.Close /></button>
             <img src={selectedImage} alt={product.name} className={styles.zoomImg} />
           </div>
         </div>
